@@ -1,8 +1,6 @@
 package Dcel::Vertex;
 use strict;
 
-use Scalar::Util qw(weaken);
-
 # create instance
 sub new {
     my $class = shift;
@@ -17,7 +15,7 @@ sub _set_edge {
     my ($self, $edge) = @_;
 
     if ($edge) {
-        $self->{edge} = weaken $edge;
+        $self->{edge} = $edge;
     } else {
         undef $self->{edge};
     }

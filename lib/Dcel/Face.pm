@@ -16,7 +16,7 @@ sub _set_edge {
     my ($self, $edge) = @_;
 
     if ($edge) {
-        $self->{edge} = weaken($edge);
+        $self->{edge} = $edge;
     } else {
         undef $self->{edge};
     } 
